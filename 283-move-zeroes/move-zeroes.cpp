@@ -15,6 +15,6 @@ for(int i=0;i<n;i++){
 while(count--){
     r.push_back(0);
 }
-v.assign(r.begin(),r.end());
+v=r;
     }
 };
