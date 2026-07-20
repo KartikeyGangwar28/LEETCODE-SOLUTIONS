@@ -4,9 +4,14 @@ public:
         if(num==0||num==1){
             return true;
         }
-        for(long long int i=1;i<=num/2;i++){
-            if(i*i==num){
+       long long int low=2,high=num/2;
+        while(low<=high){
+            if(low*low==num||high*high==num){
                 return true;
+            }
+            else{
+                low++;
+                high--;
             }
         }
         return false;
