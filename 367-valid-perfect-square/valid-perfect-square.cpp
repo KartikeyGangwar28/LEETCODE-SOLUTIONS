@@ -4,14 +4,17 @@ public:
         if(num==0||num==1){
             return true;
         }
-       long long int low=2,high=num/2;
+       long long int low=2,high=num/2,mid;
         while(low<=high){
-            if(low*low==num||high*high==num){
+            mid=low+(high-low)/2;
+            if(mid*mid==num){
                 return true;
             }
+            else if(mid*mid>num){
+             high=mid-1;
+            }
             else{
-                low++;
-                high--;
+                low=mid+1;
             }
         }
         return false;
