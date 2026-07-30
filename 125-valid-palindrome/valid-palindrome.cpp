@@ -17,6 +17,39 @@ public:
                 return false;
             }
          }
-         return true;
+        return true;
+    //     int l=0,r=n-1;
+    //    while(l<r){
+    //         if(isalpha(s[l])&&!isalpha(s[r])){
+    //                 r--;
+    //         }
+    //         else if(!isalpha(s[l])&&isalpha(s[r])){
+    //             l++;
+    //         }
+    //         else if(isalpha(s[l])&&isalpha(s[r])){
+    //             // s[l]=tolower(s[l]);
+    //             // s[r]=tolower(s[r]);
+    //             if(tolower(s[l])!=tolower(s[r])){
+    //                 return false;
+    //             }
+    //             l++;
+    //             r--;
+    //         }
+    //         else if(isalnum(s[l])&&isalnum(s[r])){
+    //             if(s[r]!=s[l]){
+    //                 return false;
+    //             }
+    //             l++;
+    //             r--;
+    //         }
+    //         else if(isalnum(s[l])&&!isalnum(s[r])){
+    //             l++;
+    //         }
+    //         else if(!isalnum(s[l])&&isalnum(s[r])){
+    //             r--;
+    //         }
+    //    }
+        
+    //     return false;
     }
 };
