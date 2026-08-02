@@ -7,10 +7,13 @@ public:
             m[c]++;
         }
          int count=0;
-            for(int i=0;i<n;i++){
-                if(m.find(jewels[i])!=m.end()){
-                    count+=m[jewels[i]];
-                }
+        //     for(int i=0;i<n;i++){
+        //         if(m.find(jewels[i])!=m.end()){
+        //             count+=m[jewels[i]];
+        //         }
+        // }
+        for(char c:jewels){
+            count+=m[c];
         }
          return count;
      
