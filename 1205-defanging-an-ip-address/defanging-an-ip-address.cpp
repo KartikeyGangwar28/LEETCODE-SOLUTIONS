@@ -1,13 +1,14 @@
 class Solution {
 public:
     string defangIPaddr(string address) {
-        string ans;
+    
         int n=address.size();
+        // address has fixed 3 dots
+            string ans;
+            ans.reserve(n+6);
         for(int i=0;i<n;i++){
             if(address[i]=='.'){
-               ans.push_back('[');
-               ans.push_back('.');
-               ans.push_back(']');
+               ans+="[.]";
             }
             else{
                 ans.push_back(address[i]);
