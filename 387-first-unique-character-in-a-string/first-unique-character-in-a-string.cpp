@@ -12,27 +12,6 @@ public:
                }
           }
           return -1;
-        // unordered_map<char,int>m;
-        // for(int i=0;i<n;i++){
-        //     m[s[i]]++;
-        // }
-        // char ele='o';
-        // for(auto&it:m){
-        //     if(ele!='o'){
-        //         break;
-        //     }
-        //                 if(it.second==1){
-        //         ele=it.first;
-        //         break;
-        //     }
-        // }
-
-        // for(int i=0;i<n;i++){
-        //     if(s[i]==ele){
-        //         return i;
-        //     }
-        // }
-        // return -1;
-
+       
     }
 };
