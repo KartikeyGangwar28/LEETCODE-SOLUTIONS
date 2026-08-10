@@ -19,25 +19,25 @@ int length(ListNode*head){
     }
     return count;
 }
-ListNode*deleteTail(ListNode*head){
-    if(head==nullptr){
-        return nullptr;
-    }
-    if(head->next==nullptr){
-        delete head;
-        return nullptr;
-    }
-    ListNode*temp=head;
-    ListNode*prev=temp;
-    while(temp->next!=nullptr){
-        prev=temp;
-        temp=temp->next;
-    }
-    prev->next=nullptr;
-    delete temp;
-    return head;
+// ListNode*deleteTail(ListNode*head){
+//     if(head==nullptr){
+//         return nullptr;
+//     }
+//     if(head->next==nullptr){
+//         delete head;
+//         return nullptr;
+//     }
+//     ListNode*temp=head;
+//     ListNode*prev=temp;
+//     while(temp->next!=nullptr){
+//         prev=temp;
+//         temp=temp->next;
+//     }
+//     prev->next=nullptr;
+//     delete temp;
+//     return head;
 
-}
+// }
 ListNode* removeNthFromEnd(ListNode* head, int n){
   int l=length(head);
 //   if(head==nullptr){
@@ -46,6 +46,9 @@ ListNode* removeNthFromEnd(ListNode* head, int n){
 //   if(n>l){
 //     return head;
 //   }
+// if(n==1){
+//     deleteTa-no need of this as our code handles it;
+// }
   if(n==l){
 ListNode*temp=head;
 head=head->next;
