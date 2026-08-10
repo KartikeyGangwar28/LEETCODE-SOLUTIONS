@@ -40,12 +40,12 @@ ListNode*deleteTail(ListNode*head){
 }
 ListNode* removeNthFromEnd(ListNode* head, int n){
   int l=length(head);
-  if(head==nullptr){
-    return nullptr;
-  }
-  if(n>l){
-    return head;
-  }
+//   if(head==nullptr){
+//     return nullptr;
+//   }
+//   if(n>l){
+//     return head;
+//   }
   if(n==l){
 ListNode*temp=head;
 head=head->next;
@@ -64,6 +64,6 @@ delete toDelete;
 return head;
 
 }
-   
+   //optimise it later;
    
 };
