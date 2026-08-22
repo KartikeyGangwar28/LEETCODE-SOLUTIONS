@@ -9,12 +9,12 @@ public:
         else if(n==2){
             return nums[0]-nums[1];
         }
-        for(int i=0,j=1;i<n||j<n;i+=2,j+=2){
-            if(i<n){
-              s1+=nums[i];
+        for(int i=0;i<n;i++){
+            if(i%2==0){
+                s1+=nums[i];
             }
-            if(j<n){
-              s2+=nums[j];
+            else{
+                s2+=nums[i];
             }
         }
         return s1-s2;
