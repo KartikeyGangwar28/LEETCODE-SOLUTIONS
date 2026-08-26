@@ -12,11 +12,9 @@ public:
                 break;
             }
         }
-       string ans;
-       for(int j=0;j<i;j++){
-        ans+=s[j];
-       }
+      string ans(s.begin(),s.begin()+i);
        return ans;
+    
 
     }
 };
