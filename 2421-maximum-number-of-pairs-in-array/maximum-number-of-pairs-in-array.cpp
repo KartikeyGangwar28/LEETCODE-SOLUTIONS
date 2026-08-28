@@ -16,8 +16,7 @@ public:
             leftover+=it.second;
          }
         }
-        //leftover=(nums.size())-(pairs*2);
-        vector<int>ans={pairs,leftover};
-        return ans;
+        // vector<int>ans={pairs,leftover};
+        return {pairs,leftover};
     }
 };
