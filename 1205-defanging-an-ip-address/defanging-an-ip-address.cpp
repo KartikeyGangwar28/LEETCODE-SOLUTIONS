@@ -9,6 +9,7 @@ public:
         for(int i=0;i<n;i++){
             if(address[i]=='.'){
                ans+="[.]";
+            //    this appends a string while push back appends a character;
             }
             else{
                 ans.push_back(address[i]);
