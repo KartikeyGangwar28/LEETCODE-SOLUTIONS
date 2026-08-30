@@ -23,6 +23,9 @@ int calculate(int start,int end){
 }
     int sumOfPrimesInRange(int n) {
      int rev=0;
+     if(n<10){
+        return calculate(n,n);
+     }
         int temp=n;
         while(temp!=0){
             rev=rev*10+temp%10;
