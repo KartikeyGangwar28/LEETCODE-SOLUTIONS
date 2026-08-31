@@ -72,7 +72,8 @@ int length(ListNode*head){
       while(next){
         if(curr->val>prev->val&&(curr->val>next->val)){
              store.push_back(count);
-             
+             //can keep track over here;
+             //it will store by default sorted as we are storing index based;
         }
         else if(curr->val<prev->val&&(curr->val<next->val)){
            store.push_back(count);  
