@@ -5,16 +5,20 @@ public:
         if(n<=1){
             return n;
         }
-        for(int i=0;i<n;i++){
-            vector<int>hash(256,0);
-            int count=0;
-            for(int j=i;j<n;j++){
-                  if(hash[s[j]]==1)break;
-                  hash[s[j]]++;
-                  count++;
-            }
-            ans=max(ans,count);
-        }
+        int l=0,r=0;
+        vector<int>hash(256,0);
+        int count=0;
+        while(r<n){ 
+        ans=max(ans,r-l+1);
+        hash[s[r]]++;
+           r++;
+           while(hash[s[r]]>0){
+            hash[s[l]]--;
+            l++;
+           }
+          
+           }
+        
         return ans;
    
     }
