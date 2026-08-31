@@ -28,7 +28,7 @@ int length(ListNode*head){
      int first=INT_MAX,last=INT_MIN,count=1,mn=INT_MAX,mx=INT_MIN;
      while(next){
         if(curr->val>prev->val&&(curr->val>next->val)){
-            int test=first;
+         //   int test=first;
              first=min(first,count);
              int prev=last;
              last=max(last,count);
