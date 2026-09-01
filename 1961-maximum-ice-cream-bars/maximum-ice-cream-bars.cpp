@@ -12,9 +12,9 @@ public:
              }
              count++;
              i++;
-             if(coins==0){
-                return count;
-             }
+            //  if(coins==0){
+            //     return count;
+            //  }
         }
         return count;
     }
