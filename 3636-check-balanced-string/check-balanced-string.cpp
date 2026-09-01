@@ -2,11 +2,12 @@ class Solution {
 public:
     bool isBalanced(string num) {
         int odd=0,even=0,n=num.size();
-        for(int i=0;i<n;i++){
-            if(i%2==0)even+=num[i]-'0';
-            else odd+=num[i]-'0';
+        for(int i=0;i<=n/2;i++){
+            if(2*i<n)even+=num[2*i]-'0';
+             if(2*i+1<n)odd+=num[(2*i)+1]-'0';
+            // cout<<even<<" "<<odd<<"\n";
         }
-        cout<<even<<" "<<odd;
+   
         return even==odd;
     }
 };
