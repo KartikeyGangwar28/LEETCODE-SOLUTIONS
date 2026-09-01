@@ -15,12 +15,9 @@ return true;
     int countConsistentStrings(string allowed, vector<string>& words) {
         int n=words.size();
         int x=allowed.size();
-       sort(allowed.begin(),allowed.end());
         int count=0;
         for(int i=0;i<n;i++){
                if(checkConsistent(words[i],allowed))count+=1;
-            
-            
         }
         return count;
     }
