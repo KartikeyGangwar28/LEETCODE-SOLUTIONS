@@ -1,7 +1,7 @@
 class Solution {
 public:
     int findContentChildren(vector<int>& g, vector<int>& s) {//assign complete cookies
-        sort(g.begin(),g.end());
+        sort(g.begin(),g.end());//not optimal for sure better try next time for a O(n) solution
         sort(s.begin(),s.end());
         int n=g.size();
         int m=s.size();
@@ -12,7 +12,8 @@ public:
         int count=0;
        while(i<n&&j<m){
         if(g[i]>s[j]){
-             j++;
+            // return count;
+            j++;
         }
         else{
             g[i]-=s[j];
