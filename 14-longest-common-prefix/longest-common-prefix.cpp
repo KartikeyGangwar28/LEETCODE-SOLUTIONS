@@ -13,7 +13,6 @@ public:
             }
             ans=min(ans,count);
         }
-       // cout<<ans;
     string as;
     for(int i=0;i<ans;i++){
   as.push_back(s[i]);
