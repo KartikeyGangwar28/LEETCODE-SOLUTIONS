@@ -1,7 +1,7 @@
 class Solution {
 public:
     int getLeastFrequentDigit(int n) {
-        unordered_map<int,int>mpp;
+        map<int,int>mpp;
         int ans=INT_MAX;
         while(n!=0){
             mpp[n%10]++;
@@ -14,7 +14,8 @@ public:
         for(auto&it:mpp){
             if(it.second==least){
                 ans=min(ans,it.first);
-            }
+               return ans;
+               }
         }
         return ans;
     }
