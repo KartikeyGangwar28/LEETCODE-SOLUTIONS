@@ -4,7 +4,7 @@ public:
         int n=nums.size();
         int low=0,r=0;
         int sum=0,ans=INT_MIN;
-        unordered_map<int,int>mp;
+        vector<int>mp(100000);
         while(r<n){
            if(mp[nums[r]]>=1){
             mp[nums[low]]--;
