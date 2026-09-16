@@ -10,25 +10,25 @@
  */
 class Solution {
 public:
-vector<int>arr;
-ListNode*generate(vector<int>&arr){
-    int n=arr.size();
-    if(n<1)return nullptr;
-    ListNode*start=new ListNode(arr[0]);
-    ListNode*mover=start;
-    for(int i=1;i<n;i++){
-        ListNode*temp=new ListNode(arr[i]);
-        mover->next=temp;
-        mover=mover->next;
-    }
-    return start;
+ListNode*start=nullptr;
+ListNode*end=nullptr;
+void generate(int val){
+     if(start==nullptr){
+         ListNode*newNode=new ListNode(val);
+         start=newNode;
+         end=newNode;
+         return;
+     }
+      ListNode*newNode=new ListNode(val);
+      end->next=newNode;
+      end=newNode;
 }
     ListNode* mergeNodes(ListNode* head) {
         ListNode*temp=head->next;
         int sum=0;
         while(temp){
           if(temp->val==0){
-            arr.push_back(sum);
+          generate(sum);
             sum=0;
           }
           else{
@@ -36,7 +36,6 @@ ListNode*generate(vector<int>&arr){
           }
           temp=temp->next;
         }
-       // for(int x:arr)cout<<x<<" ";
-       return generate(arr);
+       return start;
     }
 };
