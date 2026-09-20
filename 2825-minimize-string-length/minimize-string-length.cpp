@@ -1,7 +1,12 @@
 class Solution {
 public:
     int minimizedStringLength(string s) {
-        set<char>ans(s.begin(),s.end());
-        return ans.size();
+         int ans=0;
+         unordered_map<char,int>mp;
+         for(int i=0;i<s.size();i++){
+            if(mp[s[i]]==0)ans++;
+            mp[s[i]]+=1;
+         }
+         return ans;
     }
 };
