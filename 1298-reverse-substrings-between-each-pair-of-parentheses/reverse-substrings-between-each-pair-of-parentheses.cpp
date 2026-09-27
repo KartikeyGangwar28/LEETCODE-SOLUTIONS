@@ -18,17 +18,22 @@ public:
                     st.pop();
                 }
                 st.pop();
-               for(int j=0;j<temp.size();j++){
+                int x=temp.size();
+               for(int j=0;j<x;j++){
                 st.push(temp[j]);
                }
+               
             }
         }
-        string ans;
-       while(st.size()!=0){
+   string ans;
+       while(!st.empty()){
         ans+=st.top();
         st.pop();
        }
-       reverse(ans.begin(),ans.end());
+       int x=ans.size();
+       for(int i=0,j=x-1;i<j;i++,j--){
+              swap(ans[i],ans[j]);
+       }
        return ans;
     }
 };
