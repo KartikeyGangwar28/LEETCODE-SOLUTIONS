@@ -11,11 +11,22 @@ int reverse(int x){
 }
     int countDistinctIntegers(vector<int>& nums) {
         int n=nums.size();
-        unordered_set<int>st(nums.begin(),nums.end());
-        for(int i=0;i<n;i++){
-              int x=reverse(nums[i]);
-              st.insert(x);
+        // unordered_set<int>st(nums.begin(),nums.end());
+        // for(int i=0;i<n;i++){
+        //       int x=reverse(nums[i]);
+        //       st.insert(x);
+        // }
+        // return st.size();
+        unordered_map<int,int>mp;
+        for(int x:nums){
+            int z=reverse(x);
+            mp[x]++;
+            mp[z]++;
         }
-        return st.size();
+        int ans=0;
+        for(auto&it:mp){
+            ans++;
+        }
+        return ans;
     }
 };
