@@ -2,11 +2,10 @@ class Solution {
 public:
     int firstUniqChar(string s) {
                 int n=s.size();
-        unordered_map<char,int>m;
+        vector<int>m(257);
         for(char c:s){
             m[c]++;
         }
-        char ele;
         for(int i=0;i<n;i++){
             if(m[s[i]]==1){
                 return i;
