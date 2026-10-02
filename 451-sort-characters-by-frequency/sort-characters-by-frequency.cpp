@@ -11,7 +11,8 @@ public:
             pq.push({it.second,it.first});
         }
         string ans;
-        while(!pq.empty()){
+        int x=pq.size();
+        while(x--){
              int a=pq.top().first;
              char c=pq.top().second;
              pq.pop();
