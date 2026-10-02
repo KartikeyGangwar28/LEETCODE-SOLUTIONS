@@ -26,6 +26,7 @@ int digit(int x){
              int s2=pq.top().first;
              int dig2=pq.top().second;
              if(s1==s2)ans=max(ans,dig+dig2);
+               //it is not necessary that max digit sum means max sum of the original digit as well so let's make the digit as keyword instead of digit sum or digit as priority key - this won't work as digit becomes key so their adjacent equlaity of digit sum isn't garrantied either
 
         }
 
