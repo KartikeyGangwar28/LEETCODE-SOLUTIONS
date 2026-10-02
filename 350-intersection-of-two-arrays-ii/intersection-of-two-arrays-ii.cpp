@@ -21,7 +21,7 @@ public:
         //     }
         // }
         // return result;
-        unordered_map<int,int>mp;
+        vector<int>mp(1001);
         for(int x:a)mp[x]++;
         int n=b.size();
         vector<int>ans;
