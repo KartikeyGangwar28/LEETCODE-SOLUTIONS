@@ -10,8 +10,8 @@ string toBin(int x){
      else rem+='1';
       x=x/2;
     }
-
-    reverse(rem.begin(),rem.end());
+       ans=rem.size();
+       for(int i=0,j=ans-1;i<j;i++,j--)swap(rem[i],rem[j]);
     return rem;
 }
     string convertDateToBinary(string date) {
