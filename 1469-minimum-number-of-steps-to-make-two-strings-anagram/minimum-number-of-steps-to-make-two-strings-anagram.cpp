@@ -7,7 +7,7 @@ public:
        int count=0;
        for(int i=0;i<n;i++){
         if(mp[s[i]]==0)count++;
-        if(mp[s[i]]>0)mp[s[i]]--;
+       else if(mp[s[i]]>0)mp[s[i]]--;
        }
         return count;
     }
