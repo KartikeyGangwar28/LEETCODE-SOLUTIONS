@@ -11,7 +11,7 @@ public:
        ans[n-1]='1';
        ones--;
        if(ones==0)return ans;
-       cout<<ans;
+       //cout<<ans;
        int i=0;
        while(ones--){
                ans[i]='1';
