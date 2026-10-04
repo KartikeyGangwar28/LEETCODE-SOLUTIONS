@@ -9,22 +9,22 @@ int digitsum(int x){
     }
     return sum;
 }
-    int countLargestGroup(int n) {
+ int countLargestGroup(int n) {
      if(n<10)return n;
-     unordered_map<int,int>mp;
+     vector<int>mp(100000);
      for(int i=0;i<=n;i++){
            mp[digitsum(i)]++;
      }
      int max=INT_MIN;
      int count=0;
      for(auto&it:mp){
-         if(it.second>max){
-            max=it.second;
+         if(it>max){
+            max=it;
          }
          //if(it.second==max)count++;
      }
      for(auto&it:mp){
-        if(it.second==max)count++;
+        if(it==max)count++;
      }
 return count;
      }
