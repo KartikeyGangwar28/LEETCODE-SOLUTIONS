@@ -7,14 +7,14 @@ bool isVowel(char c){
 }
     string sortVowels(string s) {
        priority_queue<char,vector<char>,greater<char>>pq;
-      // vector<char>v; can't use this as we have to sort and can't erase as well or maybe we can but string temp can do same index based addition
-      string temp="";
+       vector<char>v; //can't use this as we have to sort and can't erase as well or maybe we can but string temp can do same index based addition
+     // string temp="";
         for(char c:s){
            //if(isVowel(c))pq.push(c);
-           if(isVowel(c))temp+=c;
-      //    if(isVowel(c))v.push_back(c);
+          // if(isVowel(c))temp+=c;
+         if(isVowel(c))v.push_back(c);
         }
-       sort(temp.begin(),temp.end());
+       sort(v.begin(),v.end());
        int k=0;
         int n=s.size();
         for(int i=0;i<n;i++){
@@ -23,7 +23,7 @@ bool isVowel(char c){
             //     pq.pop();
             // }
             if(isVowel(s[i])){
-                s[i]=temp[k];k++;}
+                s[i]=v[k];k++;}
         }
         return s;
     }
