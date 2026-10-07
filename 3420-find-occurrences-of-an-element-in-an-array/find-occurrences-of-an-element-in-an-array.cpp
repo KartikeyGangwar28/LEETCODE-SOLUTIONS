@@ -2,17 +2,17 @@ class Solution {
 public:
     vector<int> occurrencesOfElement(vector<int>& nums, vector<int>& queries, int x) {
         int a=1;
-        // unordered_map<int,int>mp;
+         unordered_map<int,int>mp;
         int n=queries.size();
         int m=nums.size();
         int frq=0;
-        vector<int>v(100000);
+     //   vector<int>v(100000); not optimal;
         for(int i=0;i<m;i++){
             int z=nums[i];
             if(z==x){
                 frq++;
-               //mp[a]=i;
-               v[a]=i;
+               mp[a]=i;
+               //v[a]=i;
                a++;
             }
         }
@@ -23,11 +23,11 @@ public:
             if(z>frq){
                 ans.push_back(-1);
             }
-         //   else ans.push_back(mp[z]);
-         else {
-            ans.push_back(v[z]);
-           // k++;
-         }
+            else ans.push_back(mp[z]);
+        //  else {
+        //   //  ans.push_back(v[z]);
+        //    // k++;
+        //  }
         }
         return ans;
     }
