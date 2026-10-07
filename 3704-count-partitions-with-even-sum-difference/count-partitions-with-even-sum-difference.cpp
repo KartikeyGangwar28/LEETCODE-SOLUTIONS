@@ -1,8 +1,8 @@
 class Solution {
 public:
-bool isEven(int x){
-    return x%2==0;
-}
+// bool isEven(int x){
+//     return x%2==0;
+// }
  int countPartitions(vector<int>& nums) {
      int n=nums.size();
     // int left=nums[0],right=nums[n-1];
@@ -35,7 +35,7 @@ bool isEven(int x){
      for(int i=1;i<n;i++){
         int diff=abs(right-left);
         cout<<diff<<"\n";
-        if(isEven(diff))count++;
+        if(diff%2==0)count++;
         left+=nums[i];
         right-=nums[i];
 
