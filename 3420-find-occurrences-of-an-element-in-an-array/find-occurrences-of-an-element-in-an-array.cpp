@@ -2,7 +2,7 @@ class Solution {
 public:
     vector<int> occurrencesOfElement(vector<int>& nums, vector<int>& queries, int x) {
         int a=1;
-         unordered_map<int,int>mp;
+         map<int,int>mp;
         int n=queries.size();
         int m=nums.size();
         int frq=0;
