@@ -1,12 +1,12 @@
 class Solution {
 public:
-int sum(string s){
+string sum(string s){
 int n=s.size();
 int ans=0;
 for(int i=0;i<n;i++){
     ans+=s[i]-'0';
 }
-return ans;
+return to_string(ans);
 }
     int getLucky(string s, int k) {
         int n=s.size();
@@ -22,7 +22,7 @@ return ans;
         }
        cout<<sm<<"\n";
         while(k--){
-            sm=to_string(sum(sm));
+            sm=sum(sm);
         }
         return stoi(sm);
 
