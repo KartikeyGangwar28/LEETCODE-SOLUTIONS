@@ -11,7 +11,7 @@ public:
         }
         int ans=0;
         int count=0;
-        while(ans<n/2&&!pq.empty()){
+        while(ans<n/2){
             ans+=pq.top().first;
             count++;
             pq.pop();
