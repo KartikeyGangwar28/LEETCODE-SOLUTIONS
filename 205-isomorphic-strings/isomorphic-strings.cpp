@@ -36,8 +36,8 @@ public:
         // return true;
         //TREAT THIS LIKE AN MATHEMATCIAL FUNCTION -ONE KEY FROM A CAN'T BE MAPPED TO MORE THAN 1 ELEMENT FROM B;
         unordered_map<char,char>mp;
-        //unordered_set<char>st;
-        vector<int>st(257,0);
+        unordered_set<char>st;
+        //vector<int>st(257,0);
         // sort(s.begin(),s.end());
         // sort(t.begin(),t.end());
         for(int i=0;i<a;i++){
@@ -45,11 +45,11 @@ public:
                 if(mp[s[i]]!=t[i])return false;
             }
             else {
-                //if(st.find(t[i])!=st.end())return false;
-                if(st[t[i]]!=0)return false;
+                if(st.find(t[i])!=st.end())return false;
+                //if(st[t[i]]!=0)return false;
                 mp[s[i]]=t[i];
-                 // st.insert(t[i]);
-                 st[t[i]]++;
+                  st.insert(t[i]);
+                 //st[t[i]]++;
                 }
         }
       return true;
