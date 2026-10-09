@@ -6,8 +6,8 @@ public:
         int n=arr.size();
         int mx=INT_MIN,smx=INT_MIN;
         for(int x:arr)mp[x]++;
-        for(auto&it:mp){
-            pq.push({it.second,it.first});
+        for(auto&[val,freq]:mp){
+            pq.push({freq,val});
         }
         int ans=0;
         int count=0;
