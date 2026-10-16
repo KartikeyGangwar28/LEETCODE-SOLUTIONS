@@ -2,7 +2,8 @@ class Solution {
 public:
     bool areNumbersAscending(string s) {
       int n=s.size();
-      vector<int>temp;
+      //vector<int>temp;
+      int prev=-1;
       for(int i=0;i<n;i++){
         if(isdigit(s[i])){
             string num="";
@@ -11,10 +12,9 @@ public:
                 i++;
             }
             int x=stoi(num);
-            if(temp.size()==0||temp.back()<x){
-                temp.push_back(x);
-            }
-            else return false;
+            if(prev==-1)prev=x;
+            else if(prev>=x)return false;
+            else prev=x;
         }
       }
       return true;
