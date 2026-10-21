@@ -26,8 +26,8 @@ public:
     //     }
     //    return {i,j,k};
     int count=0;
-    for(int i=0;i<n;i++){
-        for(int j=i+1;j<n;j++){
+    for(int i=0;i<n-2;i++){
+        for(int j=i+1;j<n-1;j++){
             if(v[j]-v[i]==diff){
             for(int k=j+1;k<n;k++){
                 if(v[k]-v[j]==diff){
