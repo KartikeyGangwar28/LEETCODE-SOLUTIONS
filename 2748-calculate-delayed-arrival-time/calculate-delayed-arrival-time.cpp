@@ -1,7 +1,6 @@
 class Solution {
 public:
     int findDelayedArrivalTime(int arrivalTime, int delayedTime) {
-        int x=arrivalTime+delayedTime;
-        return x%24;
+        return (arrivalTime+delayedTime)%24;
     }
 };
