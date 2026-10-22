@@ -8,7 +8,7 @@ public:
         }
         string ans;
         n=s.size();
-        vector<string>temp;
+        //vector<string>temp;
         for(int i=0;i<n;i++){
            string word="";
            bool flag=false;
@@ -21,14 +21,14 @@ public:
            if(flag)ans+=wd;
            else ans+=word;
            if(i<n-1)ans+=" ";
-           temp.push_back(word);
+           //temp.push_back(word);
         }
-        n=temp.size();
+       // n=temp.size();
 
         // for(int i=0;i<n;i++){
         //     if(mp[temp[i][0]]!="")temp[i]=mp[temp[i][0]];
         // }
-                for(auto it:temp)cout<<it<<" ";
+           //     for(auto it:temp)cout<<it<<" ";
      //cout<<temp[0]<<" "<<temp[1];
         // string ans="";
         // n=temp.size();
