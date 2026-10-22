@@ -1,7 +1,7 @@
 class Solution {
 public:
     vector<int> toggleLightBulbs(vector<int>& bulbs) {
-        map<int,int>mp;
+        vector<int>mp(101);
         int n=bulbs.size();
         for(int i=0;i<n;i++){
             int x=bulbs[i];
@@ -10,8 +10,8 @@ public:
               
         }
         vector<int>ans;
-        for(auto&[it,freq]:mp){
-            if(freq!=0)ans.push_back(it);
+        for(int i=0;i<101;i++){
+            if(mp[i]!=0)ans.push_back(i);
         }
         return ans;
     }
