@@ -1,6 +1,7 @@
 class Solution {
 public:
 int encrypt(int x){
+
     int mx=INT_MIN;
     int digit=0;
     while(x!=0){
@@ -16,7 +17,9 @@ int encrypt(int x){
 }
     int sumOfEncryptedInt(vector<int>& nums) {
         int ans=0;
-        for(int x:nums)ans+=encrypt(x);
+        for(int x:nums){
+            if(x<10)ans+=x;
+           else ans+=encrypt(x);}
         return ans;
     }
 };
