@@ -1,7 +1,7 @@
 class Solution {
 public:
     bool isCovered(vector<vector<int>>& ranges, int left, int right) {
-    unordered_map<int,int>mp;
+    vector<int>mp(51);
     for(int i=left;i<=right;i++){
         mp[i]++;
     }
@@ -12,7 +12,7 @@ public:
         for(int j=start;j<=end;j++)mp[j]--;
     }
     for(auto&it:mp){
-        if(it.second>=1)return false;
+        if(it>=1)return false;
     }
     return true;
     }
