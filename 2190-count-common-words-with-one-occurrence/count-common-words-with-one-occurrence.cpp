@@ -8,14 +8,14 @@ public:
         unordered_map<string,int>a;
         unordered_map<string,int>b;
         for(string s:words1){
-            // if(a[s]==0)a[s]+=1;
-            // else if(a[s]==1)a[s]=-1;
-            a[s]+=1;
+            if(a[s]==0)a[s]+=1;
+            else if(a[s]==1)a[s]=-1;
+           // a[s]+=1;
         }
          for(string s:words2){
-            // if(b[s]==0)b[s]+=1;
-            // else if(b[s]==1)b[s]=-1;
-            b[s]+=1;
+            if(b[s]==0)b[s]+=1;
+            else if(b[s]==1)b[s]=-1;
+            //b[s]+=1;
         }
         //n=min(n,m);
         int count=0;
