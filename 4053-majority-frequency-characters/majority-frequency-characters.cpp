@@ -22,12 +22,15 @@ public:
             }
         }
         string ans;
-       for(char c:s){
-        if(mp[c]==maj){
-            ans+=c;
-            mp[c]--;
+        for(auto&it:mp){
+            if(it.second==maj)ans+=it.first;
         }
-       }
+    //    for(char c:s){
+    //     if(mp[c]==maj){
+    //         ans+=c;
+    //         mp[c]--;
+    //     }
+    //    }
         return ans;
         
         // priority_queue<pair<int,char>>pq;
