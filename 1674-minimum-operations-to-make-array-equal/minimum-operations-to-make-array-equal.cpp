@@ -15,7 +15,7 @@ public:
      while(start>0){
           ans+=start;
           start-=2;
-     }  
+     }  //basically sum of alternate integers from n-1;
      return ans;
     }
 };
