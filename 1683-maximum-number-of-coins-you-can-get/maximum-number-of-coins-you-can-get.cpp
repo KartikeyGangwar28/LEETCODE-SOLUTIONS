@@ -1,7 +1,7 @@
 class Solution {
 public:
     int maxCoins(vector<int>& piles) {
-        sort(piles.begin(),piles.end());
+        sort(piles.begin(),piles.end());//try to do this without sorting;
         int n=piles.size();
         int ans=0;
         int low=0,high=n-1;
