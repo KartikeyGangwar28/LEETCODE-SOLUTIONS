@@ -11,10 +11,10 @@ int find(string s){
             return count(s.begin(),s.end(),mn);
 }
     vector<int> numSmallerByFrequency(vector<string>& queries, vector<string>& words) {
-        multiset<int>st;
+        vector<int>st;
         int n=words.size();
         for(int i=0;i<n;i++){
-            st.insert(find(words[i]));
+            st.push_back(find(words[i]));
         }
         n=queries.size();
         vector<int>ans;
