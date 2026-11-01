@@ -14,7 +14,8 @@ public:
 // }
     int countConsistentStrings(string allowed, vector<string>& words) {
         int n=words.size();
-       unordered_map<char,int>mp;
+       //unordered_map<char,int>mp;
+       vector<int>mp(257);
         for(char c:allowed)mp[c]++;
         int count=0;
         for(int i=0;i<n;i++){
