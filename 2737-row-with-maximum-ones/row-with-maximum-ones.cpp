@@ -10,12 +10,13 @@ public:
             for(int j=0;j<m;j++){
                 if(v[i][j]==1)count++;
             }
-        
+        if(count==m)return{i,count};
         if(count>prev){
             ans[0]=i;
             ans[1]=count;
             prev=count;
         }
+        
         }
         return ans;
     }
