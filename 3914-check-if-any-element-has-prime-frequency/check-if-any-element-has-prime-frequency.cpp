@@ -8,9 +8,9 @@ bool check(int x){
     return true;
 }
     bool checkPrimeFrequency(vector<int>& nums) {
-        unordered_map<int,int>mp;
+        vector<int>mp(101);
         for(int x:nums)mp[x]++;
-        for(auto&[key,val]:mp){
+        for(int val:mp){
             if(check(val))return true;
         }
         return false;
