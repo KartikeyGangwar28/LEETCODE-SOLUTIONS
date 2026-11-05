@@ -15,13 +15,12 @@ public:
                 ans+=n*m;
             }
             else{
-                while(size+m>truck){
-                    m--;
-                }
-                size+=m;ans+=m*n;
+                int remaining=truck-size;
+                size+=remaining;ans+=remaining*n;
             }
         }
         
           return ans;
+        sort(boxes.begin(),boxes.end());
     }
 };
