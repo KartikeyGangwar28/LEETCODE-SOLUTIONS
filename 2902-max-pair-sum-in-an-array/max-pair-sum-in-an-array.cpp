@@ -14,7 +14,7 @@ int largest(int x){
         unordered_map<int,priority_queue<int>>mp;
         for(int i=0;i<n;i++ ){
             int x=largest(nums[i]);
-             mp[x].push(nums[i]);
+             mp[x].emplace(nums[i]);
         }
         int ans=-1;
         for(auto&it:mp){
