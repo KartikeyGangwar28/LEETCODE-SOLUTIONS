@@ -35,7 +35,7 @@ int rev(int x){
         //cout<<mp.size();
         long long int ans=0;
         for(auto&it:mp){
-          if(it.second>=2)(ans+=((it.second-1)*(it.second))/2)%z;
+          if(it.second>=2)(ans+=((it.second-1)*(it.second))/2);//mathematical formula to count pairs;
         }
         return ans%z;
         ///////////////////////////////////////////
