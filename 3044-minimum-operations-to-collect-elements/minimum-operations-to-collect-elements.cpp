@@ -3,7 +3,7 @@ public:
     int minOperations(vector<int>& nums, int k) {
         // int start=1;
         // int target=(k*(k-1))/2;
-        set<int>st;
+        unordered_set<int>st;
         int n=nums.size();
         int i=n-1;
         int count=0;
