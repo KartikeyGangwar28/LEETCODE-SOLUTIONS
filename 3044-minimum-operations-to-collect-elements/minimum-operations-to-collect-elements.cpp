@@ -4,7 +4,7 @@ public:
         // int start=1;
         // int target=(k*(k-1))/2;
        vector<int>st;
-       vector<int>black(100);
+       vector<int>black(51);
         int n=nums.size();
         int i=n-1;
         int count=0;
