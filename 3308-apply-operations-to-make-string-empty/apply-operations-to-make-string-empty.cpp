@@ -1,11 +1,11 @@
 class Solution {
 public:
     string lastNonEmptyString(string s) {
-        unordered_map<char,int>mp;
+        vector<int>mp(257,0);
         for(char c:s)mp[c]++;
         int mx=INT_MIN;
         for(auto&it:mp){
-            mx=max(mx,it.second);
+            mx=max(mx,it);
         }
   string ans="";
         int n=s.size();
