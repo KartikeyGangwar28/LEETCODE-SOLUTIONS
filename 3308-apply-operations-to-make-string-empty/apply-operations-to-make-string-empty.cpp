@@ -15,7 +15,8 @@ public:
                 ans+=s[i];
             }
         }
-  reverse(ans.begin(),ans.end());
+  n=ans.size();
+  for(int i=0,j=n-1;i<j;i++,j--)swap(ans[i],ans[j]);
         return ans;
     }
 };
