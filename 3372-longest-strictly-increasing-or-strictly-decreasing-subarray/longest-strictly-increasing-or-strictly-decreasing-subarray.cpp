@@ -3,24 +3,23 @@ public:
     int longestMonotonicSubarray(vector<int>& nums) {
         int n=nums.size(),ans=0;
         for(int i=0;i<n-1;i++){
-            if(nums[i+1]>nums[i]){
-                int j=i,count=0;
-                while(j+1<n&&nums[j+1]>nums[j]){
-                    j++;
-                    count++;
-                }
-                ans=max(ans,count+1);
+            int start=i;
+            while(i<n-1&&nums[i+1]>nums[i]){
+                  i++;
             }
-             else if(nums[i+1]<nums[i]){
-                int j=i,count=0;
-                while(j+1<n&&nums[j+1]<nums[j]){
-                    j++;
-                    count++;
-                }
-                ans=max(ans,count+1);
+            ans=max(ans,i-start+1);
+            //i=max(0,i-1);
+            int end=i;
+            while(i<n-1&&nums[i+1]<nums[i]){
+                i++;
             }
-            cout<<ans<<"\n";
+            ans=max(ans,i-end+1);
+             if(i<n-1&&nums[i]==nums[i+1])continue;
+             else i--;
+            //if(i!=0)i--;
+          // i=max(0,i-1);
         }
+
         return max(ans,1);
     }
 };
