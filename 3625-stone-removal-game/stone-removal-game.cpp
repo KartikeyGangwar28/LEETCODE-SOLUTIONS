@@ -13,7 +13,6 @@ public:
             }
             choice--;
         }
-        if(flag)return false;
-        return true;
+       return !flag;
     }
 };
