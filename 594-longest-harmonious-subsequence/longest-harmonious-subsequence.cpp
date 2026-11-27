@@ -13,7 +13,7 @@ public:
             int freq=mp[first-1];
             ans=max(ans,freq+it.second);
         }
-        else if(mp.count(first+1)!=0){
+         if(mp.count(first+1)!=0){
             int freq=mp[first+1];
             ans=max(ans,freq+it.second);
         }
