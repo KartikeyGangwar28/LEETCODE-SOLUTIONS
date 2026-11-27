@@ -3,7 +3,7 @@ public:
     int findLHS(vector<int>& nums) {
        int n=nums.size();
       int ans=0;
-      map<int,int>mp;
+      unordered_map<int,int>mp;
       for(int x:nums){
         mp[x]++;
       }
