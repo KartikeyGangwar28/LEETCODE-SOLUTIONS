@@ -14,30 +14,30 @@ public:
 //         return a.second>b.second;
 //      }
 // }; coorect but not needed-aym
-//     vector<int> sortByBits(vector<int>& arr) {
-//       priority_queue<pair<int,int>,vector<pair<int,int>>,greater<pair<int,int>>>pq;
-//       for(int x:arr){
-//         pq.push({_builtin_popcount(x),x});
-//       }
-//       vector<int>ans;
-//       while(!pq.empty()){
-//         ans.push_back(pq.top().second);
-//         pq.pop();
-//       }
-//       return ans;
+    vector<int> sortByBits(vector<int>& arr) {
+      priority_queue<pair<int,int>,vector<pair<int,int>>,greater<pair<int,int>>>pq;
+      for(int x:arr){
+        pq.push({__builtin_popcount(x),x});
+      }
+      vector<int>ans;
+      while(!pq.empty()){
+        ans.push_back(pq.top().second);
+        pq.pop();
+      }
+      return ans;
       
-//     }
-// };
-vector<int> sortByBits(vector<int>&arr) {
-    vector<pair<int,int>>v;
-    for(int x:arr){
-        v.push_back({__builtin_popcount(x),x});
     }
-    sort(v.begin(),v.end());
-    vector<int>ans;
-    for(auto p:v){
-        ans.push_back(p.second);
-    }
-    return ans;
-}
 };
+// vector<int> sortByBits(vector<int>&arr) {
+//     vector<pair<int,int>>v;
+//     for(int x:arr){
+//         v.push_back({__builtin_popcount(x),x});
+//     }
+//     sort(v.begin(),v.end());
+//     vector<int>ans;
+//     for(auto p:v){
+//         ans.push_back(p.second);
+//     }
+//     return ans;
+// }
+// };
